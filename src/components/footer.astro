@@ -1,0 +1,77 @@
+<footer
+  class="container pb-5 grid gap-4 grid-cols-2 md:grid-cols-[1fr,2fr,1fr] items-center animate-fade-in-up animate-duration-1000"
+>
+  <span class="font-semibold text-2xl md:text-5xl"
+    >© 2024 <br /> Danielink</span
+  >
+  <nav class="text-lg md:text-2xl">
+    <ul class="flex justify-evenly lg:justify-center lg:gap-12">
+      <li>
+        <a
+          href="https://www.linkedin.com/in/daniel-cruz-2700691a3/"
+          target="_blank"
+          ><img
+            class="size-10 md:size-12 lg:size-16 hover:scale-105 hover:opacity-95 duration-300 ease-in-out"
+            src="linkedin.svg"
+            alt="Logo de Linkedin"
+          /></a
+        >
+      </li>
+      <li>
+        <a href="https://github.com/DanCruZul" target="_blank"
+          ><img
+            class="size-10 md:size-12 lg:size-16 hover:scale-105 hover:opacity-95 duration-300 ease-in-out"
+            src="github.svg"
+            alt="Logo de Github"
+          /></a
+        >
+      </li>
+      <li>
+        <a href="https://www.instagram.com/cruzzzulu/" target="_blank"
+          ><img
+            class="size-10 md:size-12 lg:size-16 hover:scale-105 hover:opacity-95 duration-300 ease-in-out"
+            src="instagram.svg"
+            alt="Logo de Instagram"
+          /></a
+        >
+      </li>
+    </ul>
+  </nav>
+  <div class="hidden lg:flex justify-between items-center text-lg md:text-2xl">
+    <div>
+      <p class="font-medium">Hora local:</p>
+      <p id="hora"></p>
+    </div>
+    <a
+      href="#home"
+      class="hidden md:block size-16 md:size-20 duration-100"
+      aria-label="scroll to top"
+    >
+      <svg class="fill-secondary hover:animate-heartbeat" viewBox="0 0 48 48"
+        ><g
+          ><path
+            d="M24,0C10.745,0,0,10.745,0,24s10.745,24,24,24s24-10.745,24-24S37.255,0,24,0z M36.15,29.001l-2.146,2.149   L23.996,21.144l-9.999,9.999l-1.069-1.069l-0.005,0.005l-1.074-1.074l0.006-0.005l-0.006-0.005l11.63-11.629l0.005,0.005l0.52-0.52   l0.007,0.007l0.007-0.007l1.167,1.166l-0.009,0.007L36.15,28.996l-0.002,0.002L36.15,29.001z"
+          ></path></g
+        ></svg
+      >
+    </a>
+  </div>
+</footer>
+
+<script>
+  function mostrarHoraLocal() {
+    var fecha = new Date();
+    var opciones = {
+      timeZone: "America/Bogota",
+      hour12: true,
+      hour: "numeric",
+      minute: "numeric",
+    };
+    var horaLocal = fecha.toLocaleString("es-CO", opciones);
+    document.getElementById("hora").innerHTML = horaLocal + " Medellin (GTM-5)";
+  }
+
+  setInterval(mostrarHoraLocal, 1000);
+
+  mostrarHoraLocal();
+</script>

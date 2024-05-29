@@ -1,0 +1,38 @@
+---
+const { img, title, link } = Astro.props;
+---
+
+<a href={link} target="_blank">
+  <div class={Astro.props.class}>
+    <div class="rounded-lg md:rounded-3xl overflow-hidden">
+      <img
+        class="group-hover:scale-105 duration-500 ease-in-out"
+        src={img}
+        alt="Portada del proyecto"
+      />
+    </div>
+
+    <div class="grid gap-4 md:gap-6">
+      <div>
+        <h4>{title}</h4>
+      </div>
+      <ul class="flex gap-2 md:gap-4">
+        <li
+          class="border-2 py-1 px-3 md:px-4 w-fit rounded-full text-sm md:text-lg"
+        >
+          DISEÑO
+        </li>
+        <li
+          class="border-2 py-1 px-3 md:px-4 w-fit rounded-full text-sm md:text-lg"
+        >
+          DESARROLLO
+        </li>
+        <li
+          class="bg-primary text-secondary py-1 px-3 md:px-4 w-fit rounded-full text-sm md:text-lg font-medium"
+        >
+          2023
+        </li>
+      </ul>
+    </div>
+  </div>
+</a>

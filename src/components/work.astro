@@ -1,0 +1,25 @@
+---
+import Card from "./ui/card.astro";
+---
+
+<section id="work" class="container section grid gap-8">
+  <h2 class="animate-fade-in-up animate-duration-1000">Proyectos</h2>
+  <div class="grid gap-8 md:grid-cols-2">
+    <div>
+      <Card
+        img="work.png"
+        title="The Legend of Zelda Landing page"
+        class="grid gap-4 max-w-[700px] text-balance group animate-fade-in-right animate-duration-1000"
+        link="https://dancruzul.github.io/zelda-website/"
+      />
+    </div>
+    <div>
+      <Card
+        img="work-2.png"
+        title="Dificultades de Aprendizaje"
+        class="md:mt-[224px] grid gap-4 max-w-[700px] text-balance group animate-fade-in-left animate-duration-1000"
+        link="https://dancruzul.github.io/dificultades-de-aprendizaje/"
+      />
+    </div>
+  </div>
+</section>
