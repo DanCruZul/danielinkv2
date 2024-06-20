@@ -3,9 +3,9 @@ import Layout from "@/layouts/Layout.astro";
 
 import Header from "@/components/header.astro";
 import Hero from "@/components/hero.astro";
-import About from "@/components/about.astro";
-import Work from "@/components/work.astro";
 import Services from "@/components/services.astro";
+import Work from "@/components/work.astro";
+import About from "@/components/about.astro";
 import Contact from "@/components/contact.astro";
 import Footer from "@/components/footer.astro";
 ---
@@ -15,11 +15,11 @@ import Footer from "@/components/footer.astro";
   <!-- <Nav /> -->
   <Hero />
   <main
-    class="relative bg-secondary text-primary rounded-xl md:rounded-3xl z-[9999]"
+    class="relative bg-secondary text-primary rounded-xl md:rounded-3xl z-[9]"
   >
-    <About />
-    <Work />
     <Services />
+    <Work />
+    <About />
   </main>
   <Contact />
   <Footer />

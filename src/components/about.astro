@@ -1,22 +1,23 @@
-<section id="about" class="container pt-20 lg:pt-28 section grid gap-8">
+<section id="about" class="container pb-12 md:pb-24 section grid gap-8">
   <h2 class="animate-fade-in-up animate-duration-1000">Sobre Mí</h2>
+
   <div class="grid gap-8 md:grid-cols-2 lg:px-32">
-    <div class="flex justify-end md:justify-center">
+    <div class="flex justify-start md:justify-center">
       <img
-        class="opacity-95 rounded-xl max-md:h-96 md:max-h-[600px] animate-fade-in animate-duration-1000"
+        class="opacity-95 rounded-xl max-md:h-80 md:max-h-[580px] animate-fade-in animate-duration-1000"
         src="about.png"
         alt="Foto de Daniel Cruz con una camisa blanca y una corbata"
       />
     </div>
 
     <div
-      class="text-lg md:text-2xl flex flex-col max-md:items-end justify-end gap-5 animate-fade-in-down animate-duration-1000"
+      class="text-lg md:text-2xl flex flex-col justify-end gap-5 pr-24 md:pr-20 animate-fade-in-down animate-duration-1000"
     >
-      <p class="max-md:text-end">
-        Me concentro en todo lo relacionado con el desarrollo y el diseño web.
-        Mi objetivo es ofrecer una experiencia digital impactante y atractiva
-        con el objetivo de hacer que destaquen en el mundo digital con un
-        impacto poderoso.
+      <p>
+        Apasionado por el diseño y el desarrollo. Llevo proyectos desde la
+        ideación hasta el lanzamiento, ayudando a startups que esten empezando
+        en el mundo digital con una experiencia web personalizada y una buena
+        estrategia que deje un impacto duradero en su negocio.
       </p>
       <a
         class="w-fit"
@@ -24,10 +25,10 @@
         target="_blank"
       >
         <button
-          class="expand border-2 w-fit px-12 py-3 rounded-full font-semibold hover:bg-primary hover:text-secondary duration-500 text-xl ease-in-out"
+          class="expand border-2 w-fit px-10 py-2 md:px-12 md:py-3 rounded-full font-semibold hover:bg-primary hover:text-secondary duration-500 text-xl ease-in-out"
         >
-          CV</button
-        >
+          <span>CV</span>
+        </button>
       </a>
     </div>
   </div>
@@ -36,5 +37,62 @@
 <style>
   img {
     mask-image: linear-gradient(#0d0d0c 85%, transparent);
+  }
+
+  Button {
+    position: relative;
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease,
+      color 0.2s ease,
+      fill 0.2s ease,
+      transform 0.2s ease-in-out;
+    overflow: hidden;
+  }
+
+  Button:hover {
+    background-color: #cfcfc5;
+    border-color: #cfcfc5;
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease,
+      color 0.2s ease,
+      fill 0.2s ease,
+      transform 0.2s ease-in-out;
+    transform: scale(1.07);
+    will-change: transform;
+    color: #0d0d0c;
+  }
+
+  Button:after {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-100%) rotate(10deg);
+    transform-origin: top left;
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease,
+      color 0.2s ease,
+      fill 0.2s ease,
+      transform 0.2s ease-in-out;
+    will-change: transform;
+    z-index: -1;
+    border-radius: 80em;
+    background-color: #cfcfc5;
+  }
+
+  Button:hover:after {
+    transform: translate(0);
+    z-index: 0;
+  }
+
+  Button > * {
+    position: relative;
+    z-index: 1;
   }
 </style>

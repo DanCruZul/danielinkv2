@@ -2,18 +2,18 @@
   id="contact"
   class="container section grid gap-2 md:gap-4 text-center animate-fade-in animate-duration-700"
 >
-  <h3>¿Tienes un proyecto en mente?</h3>
+  <h4>¿Tienes un proyecto en mente?</h4>
   <button
-    class="flex items-center gap-4 m-auto py-4 italic uppercase border-b-2 border-b-transparent hover:gap-6 md:hover:gap-12 hover:border-b-secondary hover:scale-105 duration-500 ease-in-out"
+    class="linkanimation relative flex items-center gap-3 m-auto py-4 italic uppercase border-b-transparent hover:gap-5 md:hover:gap-12 hover:border-b-secondary hover:scale-105 duration-300 ease-in-out"
   >
-    <a
-      href="mailto:danielcruzzuluaga@gmail.com?subject=Asunto del Correo&body=Escribe tu mensaje aquí"
-      ><span class="font-semibold text-4xl md:text-7xl lg:text-8xl"
-        >Contáctame</span
+    <h3>
+      <a
+        href="mailto:danielcruzzuluaga@gmail.com?subject=Asunto del Correo&body=Escribe tu mensaje aquí"
+        >Contáctame</a
       >
-    </a>
+    </h3>
     <svg
-      class="size-10 md:size-20"
+      class="size-8 md:size-20"
       viewBox="0 0 16 16"
       xmlns="http://www.w3.org/2000/svg"
       ><polygon
@@ -23,4 +23,39 @@
       ></polygon></svg
     >
   </button>
+  <style>
+    .linkanimation::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 2px;
+      background-color: #0d0d0c;
+      transform: scale(1, 1);
+      transition: background-color 0.5s ease-in-out;
+      bottom: 5px;
+    }
+    .linkanimation:hover::before {
+      animation: link ease 1s 1 300ms;
+      transform-origin: right;
+    }
+
+    @media (min-width: 768px) {
+      .linkanimation::before {
+        bottom: 0px;
+        height: 3px;
+      }
+    }
+
+    @keyframes link {
+      50% {
+        transform: scaleX(0);
+      }
+      50.1% {
+        transform: translateX(-100%) scalex(-0.01);
+      }
+      100% {
+        transform: translateX(-100%) scalex(-1);
+      }
+    }
+  </style>
 </section>

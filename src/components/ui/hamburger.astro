@@ -1,0 +1,62 @@
+<section
+  id="hammm"
+  class="fixed hidden w-[98%] md:w-[50%] lg:hidden h-[99vh] right-0 bottom-0 px-8 pt-36 bg-secondary text-primary z-[9999] rounded-lg"
+>
+  <nav class="flex flex-col h-full justify-between">
+    <ul class="flex flex-col text-5xl gap-1 font-bold uppercase z-30">
+      <li>
+        <a href="#home">Inicio</a>
+      </li>
+      <li>
+        <a href="#services">Servicios</a>
+      </li>
+      <li>
+        <a href="#work">Proyectos</a>
+      </li>
+      <li>
+        <a href="#about">Sobre Mí</a>
+      </li>
+      <li>
+        <a href="#contact">Contacto</a>
+      </li>
+    </ul>
+    <footer class="pb-28">
+      <div class="flex flex-col text-xl lg:text-2xl text-primary">
+        <p class="font-semibold">Contáctame:</p>
+        <a
+          href="mailto:danielcruzzuluaga@gmail.com?subject=Asunto del Correo&body=Escribe tu mensaje aquí"
+          >email@gmail.com</a
+        >
+      </div>
+    </footer>
+  </nav>
+
+  <div class="animate-fade-in animate-duration-300">
+    <img class="absolute top-0 z-10" src="blob.svg" alt="" />
+    <img class="absolute top-12" src=" blob-2.svg" alt="" />
+  </div>
+
+  <button onclick="Close(this)">
+    <div
+      class="absolute top-6 right-7 size-10 lg:size-16 lg:top-7 lg:right-10 rounded-full bg-secondary z-20"
+    >
+    </div>
+    <svg
+      class="absolute top-5 right-5 z-20 fill-primary size-14 lg:size-20 lg:right-7 hover:scale-90 duration-300"
+      viewBox="0 0 16 16"
+      ><path
+        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"
+      ></path></svg
+    >
+  </button>
+</section>
+
+<script>
+  var ham = document.getElementById("hammm");
+  function Open() {
+    ham?.classList.remove("hidden");
+  }
+  function Close() {
+    ham?.classList.add("hidden");
+  }
+</script>
