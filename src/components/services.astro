@@ -1,5 +1,6 @@
 ---
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 ---
 
 <section id="services" class="container section">
@@ -103,7 +104,7 @@ import gsap from "gsap";
 <script>
   gsap.registerPlugin(ScrollTrigger);
 
-  const textElements = gsap.utils.toArray(".text");
+  const textElements = gsap.utils.toArray(".text") as HTMLElement[];
 
   textElements.forEach((text) => {
     gsap.to(text, {
