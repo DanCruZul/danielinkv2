@@ -1,31 +1,59 @@
-<section class="container section mt-8 md:mt-20 grid gap-8 md:gap-10">
-  <div
-    class="animate-fade-in animate-delay-300 grid md:justify-center text-lg lg:text-2xl"
-  >
-    <span
-      class="py-1 px-3 md:py-2 md:px-6 w-fit font-medium animate-shimmer rounded-full text-primary bg-[linear-gradient(110deg,#0d0d0c,45%,#0d0d0c95,65%,#0d0d0c)] bg-[length:200%_100%]"
-    >
-      diseñador y desarrollador web
-    </span>
-  </div>
-  <h1 class="md:text-center animate-fade-in-up animate-duration-1000">
-    Daniel Cruz
-  </h1>
-  <div
-    class="animate-fade-in animate-delay-500 grid md:grid-cols-[1.8fr,1fr] 2xl:px-20 gap-8"
-  >
-    <div class="hidden md:flex flex-col gap-1 text-lg lg:text-2xl">
-      <p class="font-semibold">Contáctame</p>
-      <a
-        href="mailto:danielcruzzuluaga@gmail.com?subject=Asunto del Correo&body=Escribe tu mensaje aquí"
-        >email@gmail.com</a
+<section class="container section mt-8 md:pb-28 grid gap-10 md:gap-16">
+  <div class="grid gap-8 md:gap-10">
+    <div class="animate-fade-in animate-delay-300 m-auto text-lg lg:text-2xl">
+      <span
+        class="py-2 px-4 md:py-2 md:px-8 w-fit font-normal animate-shimmer rounded-full text-primary bg-[linear-gradient(110deg,#0d0d0c,45%,#0d0d0c95,65%,#0d0d0c)] bg-[length:200%_100%]"
       >
+        hola! 👋 soy Daniel Cruz
+      </span>
     </div>
-    <div class="text-lg lg:text-2xl text-pretty max-md:pr-24">
-      <p>
-        Desarrollador Front-end y Diseñador Web con interés en ayudar a negocios
-        digitales a que destaquen en el mundo digital.
-      </p>
+
+    <div class="relative 2xl:px-72">
+      <div class="animate-fade-in animate-delay-300">
+        <img class="rotate absolute" src="hero-square.svg" alt="" />
+      </div>
+
+      <h1 class="text-center animate-fade-in-up animate-duration-1000">
+        Diseñador UX y <span>Desarrollador Web</span>
+      </h1>
+
+      <div class="animate-fade-in animate-delay-300">
+        <img
+          class="rotate absolute right-52 top-40"
+          src="hero-circle.svg"
+          alt=""
+        />
+      </div>
     </div>
+  </div>
+
+  <div class="m-auto animate-fade-in animate-delay-300">
+    <a
+      href="mailto:danielcruzzuluaga@gmail.com?subject=Asunto del Correo&body=Escribe tu mensaje aquí"
+    >
+      <button
+        class="py-2 px-5 text-xl md:text-2xl font-normal text-center text-primary bg-secondary border-2 border-primary rounded-lg shadow-[5px_5px_0px] shadow-secondary hover:bg-transparent/85 active:shadow-none active:translate-y-1 active:bg-primary active:text-secondary active:border-secondary duration-500"
+      >
+        Contáctame
+      </button>
+    </a>
   </div>
 </section>
+
+<style>
+  .rotate {
+    animation: rotate-animation 10s infinite linear;
+  }
+
+  @keyframes rotate-animation {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+</style>

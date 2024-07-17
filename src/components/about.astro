@@ -1,33 +1,43 @@
-<section id="about" class="container pb-12 md:pb-24 section grid gap-8">
+<section id="about" class="container pt-20 lg:pt-28 section grid gap-8">
   <h2 class="animate-fade-in-up animate-duration-1000">Sobre Mí</h2>
 
-  <div class="grid gap-8 md:grid-cols-2 lg:px-32">
-    <div class="flex justify-start md:justify-center">
+  <div class="grid gap-8 md:grid-cols-2 lg:px-28">
+    <div class="relative flex justify-center">
       <img
-        class="opacity-95 rounded-xl max-md:h-80 md:max-h-[580px] animate-fade-in animate-duration-1000"
+        class="opacity-95 rounded-xl max-md:h-[480px] md:max-h-[580px] animate-fade-in animate-duration-1000"
         src="about.png"
         alt="Foto de Daniel Cruz con una camisa blanca y una corbata"
       />
+      <div
+        class="absolute flex items-center gap-2 md:gap-3 top-80 max-md:left-10 md:top-96 py-2 px-4 md:px-8 w-fit text-xl font-normal rounded-full text-primary bg-secondary"
+      >
+        <span>Disponible para trabajo</span>
+        <div class="circle pulse mt-1 size-3 md:size-4 bg-green-800"></div>
+      </div>
     </div>
 
     <div
-      class="text-lg md:text-2xl flex flex-col justify-end gap-5 pr-24 md:pr-20 animate-fade-in-down animate-duration-1000"
+      class="text-lg md:text-2xl flex flex-col justify-end gap-5 animate-fade-in-down animate-duration-1000"
     >
-      <p>
+      <h4>
+        Me especializo en crear experiencias digitales que conectan a través del
+        desarrollo y el diseño.
+      </h4>
+      <p class="text-primary/80">
         Apasionado por el diseño y el desarrollo. Llevo proyectos desde la
         ideación hasta el lanzamiento, ayudando a startups que esten empezando
         en el mundo digital con una experiencia web personalizada y una buena
         estrategia que deje un impacto duradero en su negocio.
       </p>
       <a
-        class="w-fit"
+        class="w-fit pb-2"
         href="https://drive.google.com/file/d/1_IdgKcVT85LElIzbw4wFv3hQxTKwWIAf/view?usp=sharing"
         target="_blank"
       >
         <button
-          class="expand border-2 w-fit px-10 py-2 md:px-12 md:py-3 rounded-full font-semibold hover:bg-primary hover:text-secondary duration-500 text-xl ease-in-out"
+          class="py-2 px-10 text-xl md:text-2xl font-semibold text-center text-primary border-2 border-primary rounded-lg shadow-[5px_5px_0px] shadow-primary hover:bg-primary/5 active:shadow-none active:translate-y-1 active:bg-secondary active:text-primary active:border-primary duration-300"
         >
-          <span>CV</span>
+          CV
         </button>
       </a>
     </div>
@@ -39,7 +49,25 @@
     mask-image: linear-gradient(#0d0d0c 85%, transparent);
   }
 
-  Button {
+  .circle {
+    border-radius: 50%;
+    box-shadow: 0px 0px 1px 1px #0000001a;
+  }
+
+  .pulse {
+    animation: pulse-animation 1.5s infinite;
+  }
+
+  @keyframes pulse-animation {
+    0% {
+      box-shadow: 0 0 0 0px #ffffff60;
+    }
+    100% {
+      box-shadow: 0 0 0 5px #ffffff3a;
+    }
+  }
+
+  /* Button {
     position: relative;
     transition:
       background-color 0.2s ease,
@@ -51,17 +79,16 @@
   }
 
   Button:hover {
-    background-color: #cfcfc5;
-    border-color: #cfcfc5;
+    background-color: #0d0d0c;
+    border-color: #0d0d0c;
     transition:
       background-color 0.2s ease,
       border-color 0.2s ease,
       color 0.2s ease,
       fill 0.2s ease,
       transform 0.2s ease-in-out;
-    transform: scale(1.07);
     will-change: transform;
-    color: #0d0d0c;
+    color: #cfcfc5;
   }
 
   Button:after {
@@ -83,7 +110,7 @@
     will-change: transform;
     z-index: -1;
     border-radius: 80em;
-    background-color: #cfcfc5;
+    background-color: #0d0d0c;
   }
 
   Button:hover:after {
@@ -94,5 +121,5 @@
   Button > * {
     position: relative;
     z-index: 1;
-  }
+  } */
 </style>
