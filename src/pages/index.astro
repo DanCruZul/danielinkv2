@@ -8,19 +8,19 @@ import Services from "@/components/services.astro";
 import Work from "@/components/work.astro";
 import Contact from "@/components/contact.astro";
 import Footer from "@/components/footer.astro";
+import Hamburguer from "@/components/ui/hamburger.astro";
 ---
 
 <Layout title="Daniel Cruz - Desarrollador Web & Diseñador">
   <Header />
   <!-- <Nav /> -->
   <Hero />
-  <main
-    class="relative bg-secondary text-primary rounded-xl md:rounded-3xl z-[9]"
-  >
+  <main class="relative bg-secondary text-primary rounded-xl md:rounded-3xl">
     <About />
     <Services />
     <Work />
   </main>
   <Contact />
   <Footer />
+  <Hamburguer />
 </Layout>
